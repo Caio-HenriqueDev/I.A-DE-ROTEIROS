@@ -1,19 +1,24 @@
 {
   "version": 2,
+  "name": "moove-roteiros",
   "builds": [
     {
-      "src": "moove-roteiros.html",
+      "src": "index.html",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/moove-roteiros.html",
       "dest": "/moove-roteiros.html"
     },
     {
       "src": "/(.*)",
-      "dest": "/moove-roteiros.html"
+      "dest": "/index.html"
     }
   ],
   "headers": [
@@ -35,10 +40,30 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    },
+    {
+      "source": "/index.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
         }
       ]
     }
   ],
   "functions": {},
-  "env": {}
+  "env": {},
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  },
+  "regions": ["gru1"],
+  "public": true
 } 
