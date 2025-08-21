@@ -39,8 +39,10 @@ cd I.A-DE-ROTEIROS
 ## 🔧 Configuração para Vercel
 
 ### Arquivos de Configuração
-- `vercel.json`: Configuração específica para o Vercel
-- `moove-roteiros.html`: Aplicação principal otimizada
+- `vercel.json`: Configuração principal otimizada
+- `vercel-build.json`: Configuração específica de build
+- `.vercelignore`: Arquivos ignorados durante deploy
+- `moove-roteiros.html`: Aplicação principal
 
 ### Deploy no Vercel
 1. Conecte seu repositório GitHub ao Vercel
@@ -82,7 +84,9 @@ Os estilos podem ser facilmente personalizados editando a seção `<style>` no a
 I.A-DE-ROTEIROS/
 ├── README.md
 ├── moove-roteiros.html     # Aplicação principal
-├── vercel.json            # Configuração do Vercel
+├── vercel.json            # Configuração principal do Vercel
+├── vercel-build.json      # Configuração de build
+├── .vercelignore         # Arquivos ignorados no deploy
 ├── .gitignore
 └── LICENSE
 ```
@@ -105,16 +109,74 @@ I.A-DE-ROTEIROS/
 ## 🚀 Otimizações para Vercel
 
 ### Problemas Resolvidos
-- ✅ **CORPO_NÃO_UMA_STRING_DE_FUNÇÃO**: Scripts otimizados e seguros
-- ✅ **IMPLANTAÇÃO_BLOQUEADA**: Configuração correta no vercel.json
+- ✅ **CORPO_NÃO_UMA_STRING_DE_FUNÇÃO**: Configuração estática sem funções serverless
+- ✅ **IMPLANTAÇÃO_BLOQUEADA**: Configuração correta e limpa
 - ✅ **DNS_HOSTNAME_VAZIO**: Rotas configuradas adequadamente
-- ✅ **FALHA_NA_INVOCAÇÃO_DA_FUNÇÃO**: Sem funções serverless desnecessárias
+- ✅ **FALHA_NA_INVOCAÇÃO_DA_FUNÇÃO**: Sem processamento serverless desnecessário
+- ✅ **ROTEADOR_NÃO_PODE_CORRIGIR**: Mapeamento de rotas explícito
+- ✅ **RECURSO_NÃO_ENCONTRADO**: Arquivos localizados corretamente
 
 ### Configurações Implementadas
 - **Builds estáticos**: Uso do @vercel/static
-- **Rotas configuradas**: Redirecionamento correto para moove-roteiros.html
+- **Rotas configuradas**: Mapeamento explícito para moove-roteiros.html
 - **Headers de segurança**: Proteção contra ataques comuns
-- **Configuração otimizada**: Para melhor performance no Vercel
+- **Content Security Policy**: Política de segurança robusta
+- **Cache otimizado**: Configuração de cache para melhor performance
+- **Região BR**: Configurado para gru1 (São Paulo)
+
+## 🔍 Troubleshooting Completo
+
+### Erros Comuns no Vercel e Soluções
+
+#### 1. **CORPO_NÃO_UMA_STRING_DE_FUNÇÃO (502)**
+**Causa**: Vercel tentando executar HTML como função serverless
+**Solução**: ✅ Configuração estática implementada
+
+#### 2. **IMPLANTAÇÃO_BLOQUEADA (403)**
+**Causa**: Configuração incorreta ou conflitos
+**Solução**: ✅ Configuração limpa e específica implementada
+
+#### 3. **DNS_HOSTNAME_VAZIO (502)**
+**Causa**: Rotas mal configuradas
+**Solução**: ✅ Mapeamento de rotas explícito implementado
+
+#### 4. **FALHA_NA_INVOCAÇÃO_DA_FUNÇÃO (500)**
+**Causa**: Processamento desnecessário de arquivos estáticos
+**Solução**: ✅ Build estático configurado
+
+#### 5. **ROTEADOR_NÃO_PODE_CORRIGIR (502)**
+**Causa**: URLs não mapeadas
+**Solução**: ✅ Todas as rotas mapeadas explicitamente
+
+#### 6. **RECURSO_NÃO_ENCONTRADO (404)**
+**Causa**: Arquivos não localizados
+**Solução**: ✅ Estrutura de arquivos organizada
+
+### Passos para Resolver Problemas
+
+1. **Verifique os arquivos de configuração**:
+   - `vercel.json` deve estar na raiz
+   - `.vercelignore` deve estar configurado
+   - `vercel-build.json` deve estar presente
+
+2. **Limpe o cache do Vercel**:
+   ```bash
+   vercel --clear-cache
+   ```
+
+3. **Verifique os logs**:
+   ```bash
+   vercel logs
+   ```
+
+4. **Force um novo deploy**:
+   ```bash
+   vercel --force
+   ```
+
+5. **Verifique a estrutura de arquivos**:
+   - Todos os arquivos devem estar na raiz
+   - Nomes de arquivos devem corresponder exatamente
 
 ## 🤝 Contribuição
 
@@ -140,22 +202,13 @@ Para suporte técnico ou dúvidas sobre o projeto:
 
 - [x] Otimização para Vercel
 - [x] Resolução de erros de deploy
-- [x] Configuração otimizada
+- [x] Configuração robusta
+- [x] Troubleshooting completo
 - [ ] Adicionar tema escuro
 - [ ] Implementar cache offline
 - [ ] Adicionar analytics
 - [ ] Suporte a múltiplos idiomas
 - [ ] Integração com CRM
-
-## 🔍 Troubleshooting
-
-### Erros Comuns no Vercel
-Se você encontrar erros específicos:
-
-1. **Verifique o vercel.json**: Certifique-se de que está na raiz do projeto
-2. **Use moove-roteiros.html**: Arquivo principal otimizado
-3. **Limpe o cache**: Use `vercel --clear-cache` se necessário
-4. **Verifique logs**: Use `vercel logs` para debug
 
 ---
 

@@ -1,0 +1,55 @@
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+*.log
+
+# Arquivos de desenvolvimento
+node_modules/
+.env
+.env.local
+.env.*.local
+
+# Arquivos de build
+dist/
+build/
+out/
+.next/
+.nuxt/
+
+# Arquivos de cache
+.cache/
+.parcel-cache/
+.vercel/
+
+# Arquivos de controle de versão
+.git/
+.gitignore
+
+# Arquivos de documentação
+README.md
+LICENSE
+*.md
+
+# Arquivos de configuração local
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs e arquivos temporários
+*.tmp
+*.temp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Arquivos de teste
+coverage/
+.nyc_output/
+*.test.js
+*.spec.js
+
+# Arquivos de backup
+*.bak
+*.backup
+*~ 

@@ -10,11 +10,23 @@
   "routes": [
     {
       "src": "/",
-      "dest": "/moove-roteiros.html"
+      "dest": "/moove-roteiros.html",
+      "status": 200
+    },
+    {
+      "src": "/moove-roteiros",
+      "dest": "/moove-roteiros.html",
+      "status": 200
+    },
+    {
+      "src": "/moove-roteiros.html",
+      "dest": "/moove-roteiros.html",
+      "status": 200
     },
     {
       "src": "/(.*)",
-      "dest": "/moove-roteiros.html"
+      "dest": "/moove-roteiros.html",
+      "status": 200
     }
   ],
   "headers": [
@@ -40,6 +52,10 @@
         {
           "key": "Permissions-Policy",
           "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
         }
       ]
     },
@@ -48,7 +64,11 @@
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
+          "value": "public, max-age=3600, must-revalidate"
+        },
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
         }
       ]
     }
@@ -61,5 +81,10 @@
     }
   },
   "regions": ["gru1"],
-  "public": true
+  "public": true,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "github": {
+    "silent": true
+  }
 } 
