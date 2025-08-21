@@ -3,22 +3,18 @@
   "name": "moove-roteiros",
   "builds": [
     {
-      "src": "index.html",
+      "src": "moove-roteiros.html",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/moove-roteiros.html",
       "dest": "/moove-roteiros.html"
     },
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/moove-roteiros.html"
     }
   ],
   "headers": [
@@ -48,7 +44,7 @@
       ]
     },
     {
-      "source": "/index.html",
+      "source": "/moove-roteiros.html",
       "headers": [
         {
           "key": "Cache-Control",

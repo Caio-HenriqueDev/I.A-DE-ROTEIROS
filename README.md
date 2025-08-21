@@ -28,7 +28,7 @@ git clone https://github.com/Caio-HenriqueDev/I.A-DE-ROTEIROS.git
 cd I.A-DE-ROTEIROS
 ```
 
-2. Abra o arquivo `index.html` em qualquer navegador web moderno
+2. Abra o arquivo `moove-roteiros.html` em qualquer navegador web moderno
 
 ### Hospedagem
 - **Vercel (Recomendado)**: Conecte o repositório para deploy automático
@@ -40,8 +40,7 @@ cd I.A-DE-ROTEIROS
 
 ### Arquivos de Configuração
 - `vercel.json`: Configuração específica para o Vercel
-- `index.html`: Versão otimizada para produção
-- `moove-roteiros.html`: Versão original (mantida para referência)
+- `moove-roteiros.html`: Aplicação principal otimizada
 
 ### Deploy no Vercel
 1. Conecte seu repositório GitHub ao Vercel
@@ -61,13 +60,12 @@ A aplicação é totalmente responsiva e se adapta a diferentes tamanhos de tela
 - **Design Interativo**: Animações e efeitos visuais suaves
 - **Navegação Intuitiva**: Interface limpa e fácil de usar
 - **Suporte 24/7**: Chat sempre disponível para clientes
-- **Estado de Loading**: Indicador visual durante carregamento
-- **Fallback Inteligente**: Mensagem de erro amigável se o chat falhar
+- **Interface Moderna**: Design elegante com gradientes e animações
 
 ## 🔧 Configuração
 
 ### Personalização do Chat
-Para personalizar o agente de chat, edite o arquivo `index.html` e altere o `agentId`:
+Para personalizar o agente de chat, edite o arquivo `moove-roteiros.html` e altere o `agentId`:
 
 ```javascript
 Chatbox.initStandard({
@@ -83,8 +81,7 @@ Os estilos podem ser facilmente personalizados editando a seção `<style>` no a
 ```
 I.A-DE-ROTEIROS/
 ├── README.md
-├── index.html              # Versão otimizada para produção
-├── moove-roteiros.html     # Versão original
+├── moove-roteiros.html     # Aplicação principal
 ├── vercel.json            # Configuração do Vercel
 ├── .gitignore
 └── LICENSE
@@ -96,11 +93,11 @@ I.A-DE-ROTEIROS/
 - **Animações**: Elementos flutuantes e transições suaves
 - **Glassmorphism**: Efeito de vidro fosco para cards
 - **Sombras**: Profundidade visual com sombras sutis
-- **Loading States**: Indicadores visuais de carregamento
+- **Design Responsivo**: Adaptação perfeita para todos os dispositivos
 
 ## 📊 Métricas de Performance
 
-- **Tamanho**: ~15KB (HTML + CSS + JS otimizados)
+- **Tamanho**: ~7KB (HTML + CSS + JS)
 - **Carregamento**: < 1 segundo em conexões rápidas
 - **Compatibilidade**: 95%+ dos navegadores modernos
 - **Lighthouse Score**: 90+ em todas as categorias
@@ -115,9 +112,9 @@ I.A-DE-ROTEIROS/
 
 ### Configurações Implementadas
 - **Builds estáticos**: Uso do @vercel/static
-- **Rotas configuradas**: Redirecionamento correto para index.html
+- **Rotas configuradas**: Redirecionamento correto para moove-roteiros.html
 - **Headers de segurança**: Proteção contra ataques comuns
-- **Fallbacks inteligentes**: Tratamento de erros robusto
+- **Configuração otimizada**: Para melhor performance no Vercel
 
 ## 🤝 Contribuição
 
@@ -143,7 +140,7 @@ Para suporte técnico ou dúvidas sobre o projeto:
 
 - [x] Otimização para Vercel
 - [x] Resolução de erros de deploy
-- [x] Estados de loading e fallback
+- [x] Configuração otimizada
 - [ ] Adicionar tema escuro
 - [ ] Implementar cache offline
 - [ ] Adicionar analytics
@@ -156,7 +153,7 @@ Para suporte técnico ou dúvidas sobre o projeto:
 Se você encontrar erros específicos:
 
 1. **Verifique o vercel.json**: Certifique-se de que está na raiz do projeto
-2. **Use index.html**: A versão otimizada resolve a maioria dos problemas
+2. **Use moove-roteiros.html**: Arquivo principal otimizado
 3. **Limpe o cache**: Use `vercel --clear-cache` se necessário
 4. **Verifique logs**: Use `vercel logs` para debug
 
